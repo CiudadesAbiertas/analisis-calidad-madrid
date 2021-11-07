@@ -1,0 +1,163 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Cod_Postal",
+    "newColumnName": "cod_postal",
+    "description": "Rename column Cod_Postal to cod_postal"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Escalera",
+    "newColumnName": "escalera",
+    "description": "Rename column Escalera to escalera"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Superficie_ES",
+    "newColumnName": "superficie_es",
+    "description": "Rename column Superficie_ES to superficie_es"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Superficie_RA",
+    "newColumnName": "superficie_ra",
+    "description": "Rename column Superficie_RA to superficie_ra"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Fecha_confir_ult_decreto_resol",
+    "newColumnName": "fecha_confir_ult_decreto_resol",
+    "description": "Rename column Fecha_confir_ult_decreto_resol to fecha_confir_ult_decreto_resol"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ID_VIAL",
+    "newColumnName": "id_vial",
+    "description": "Rename column ID_VIAL to id_vial"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DESC_CLASE",
+    "newColumnName": "desc_clase",
+    "description": "Rename column DESC_CLASE to desc_clase"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DESC_NOMBRE",
+    "newColumnName": "desc_nombre",
+    "description": "Rename column DESC_NOMBRE to desc_nombre"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_ini_LJ_es",
+    "newColumnName": "hora_ini_lj_es",
+    "description": "Rename column hora_ini_LJ_es to hora_ini_lj_es"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_fin_LJ_es",
+    "newColumnName": "hora_fin_lj_es",
+    "description": "Rename column hora_fin_LJ_es to hora_fin_lj_es"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_ini_LJ_ra",
+    "newColumnName": "hora_ini_lj_ra",
+    "description": "Rename column hora_ini_LJ_ra to hora_ini_lj_ra"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_fin_LJ_ra",
+    "newColumnName": "hora_fin_lj_ra",
+    "description": "Rename column hora_fin_LJ_ra to hora_fin_lj_ra"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_ini_VS_es",
+    "newColumnName": "hora_ini_vs_es",
+    "description": "Rename column hora_ini_VS_es to hora_ini_vs_es"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_fin_VS_es",
+    "newColumnName": "hora_fin_vs_es",
+    "description": "Rename column hora_fin_VS_es to hora_fin_vs_es"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_ini_VS_ra",
+    "newColumnName": "hora_ini_vs_ra",
+    "description": "Rename column hora_ini_VS_ra to hora_ini_vs_ra"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "hora_fin_VS_ra",
+    "newColumnName": "hora_fin_vs_ra",
+    "description": "Rename column hora_fin_VS_ra to hora_fin_vs_ra"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_confir_ult_decreto_resol",
+    "expression": "grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_confir_ult_decreto_resol using expression grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "coordenada_x_local",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column coordenada_x_local using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "coordenada_y_local",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column coordenada_y_local using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "superficie_es",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column superficie_es using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "superficie_ra",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column superficie_ra using expression grel:value.replace(\",\",\".\")"
+  }
+]

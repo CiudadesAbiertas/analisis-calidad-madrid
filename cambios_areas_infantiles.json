@@ -1,0 +1,99 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MXASSETNUM,C,12",
+    "newColumnName": "MXASSETNUM_C_12",
+    "description": "Rename column MXASSETNUM,C,12 to MXASSETNUM_C_12"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DESCRIPTIO,C,105",
+    "newColumnName": "DESCRIPTIO_C_105",
+    "description": "Rename column DESCRIPTIO,C,105 to DESCRIPTIO_C_105"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "INSTALLDAT,D",
+    "expression": "grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column INSTALLDAT,D using expression grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MINTDISTRI,C,20",
+    "newColumnName": "MINTDISTRI_C_20",
+    "description": "Rename column MINTDISTRI,C,20 to MINTDISTRI_C_20"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE_DIS,C,25",
+    "newColumnName": "NOMBRE_DIS_C_25",
+    "description": "Rename column NOMBRE_DIS,C,25 to NOMBRE_DIS_C_25"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MINTBARRIO,C,10",
+    "newColumnName": "MINTBARRIO_C_10",
+    "description": "Rename column MINTBARRIO,C,10 to MINTBARRIO_C_10"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE_BAR,C,50",
+    "newColumnName": "NOMBRE_BAR_C_50",
+    "description": "Rename column NOMBRE_BAR,C,50 to NOMBRE_BAR_C_50"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "INSTALLDAT,D",
+    "newColumnName": "INSTALLDAT_D",
+    "description": "Rename column INSTALLDAT,D to INSTALLDAT_D"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MINTTIPOVI,C,15",
+    "newColumnName": "MINTTIPOVI_C_15",
+    "description": "Rename column MINTTIPOVI,C,15 to MINTTIPOVI_C_15"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MINTNOMBRE,C,254",
+    "newColumnName": "MINTNOMBRE_C_254",
+    "description": "Rename column MINTNOMBRE,C,254 to MINTNOMBRE_C_254"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MINTNUMERO,C,25",
+    "newColumnName": "MINTNUMERO_C_25",
+    "description": "Rename column MINTNUMERO,C,25 to MINTNUMERO_C_25"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "MINTNDP,C,20",
+    "newColumnName": "MINTNDP_C_20",
+    "description": "Rename column MINTNDP,C,20 to MINTNDP_C_20"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO,C,254",
+    "newColumnName": "TIPO_C_254",
+    "description": "Rename column TIPO,C,254 to TIPO_C_254"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TOTAL_ELEM,N,10,0",
+    "newColumnName": "TOTAL_ELEM_N_10_0",
+    "description": "Rename column TOTAL_ELEM,N,10,0 to TOTAL_ELEM_N_10_0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ESTADO,C,50",
+    "newColumnName": "ESTADO_C_50",
+    "description": "Rename column ESTADO,C,50 to ESTADO_C_50"
+  }
+]

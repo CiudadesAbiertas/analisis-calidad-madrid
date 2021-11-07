@@ -1,0 +1,193 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código Distrito",
+    "newColumnName": "codigo_distrito",
+    "description": "Rename column Código Distrito to codigo_distrito"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Distrito",
+    "newColumnName": "distrito",
+    "description": "Rename column Distrito to distrito"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código Área de Acción",
+    "newColumnName": "codigo_area_de_accion",
+    "description": "Rename column Código Área de Acción to codigo_area_de_accion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Área de Acción",
+    "newColumnName": "area_de_accion",
+    "description": "Rename column Área de Acción to area_de_accion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Eje Estratégico",
+    "newColumnName": "eje_estrategico",
+    "description": "Rename column Eje Estratégico to eje_estrategico"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código Objetivo estrategico",
+    "newColumnName": "codigo_objetivo_estrategico",
+    "description": "Rename column Código Objetivo estrategico to codigo_objetivo_estrategico"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Denominación del Objetivo estratégico",
+    "newColumnName": "denominacion_del_objetivo_estrategico",
+    "description": "Rename column Denominación del Objetivo estratégico to denominacion_del_objetivo_estrategico"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código Estrategia",
+    "newColumnName": "codigo_estrategia",
+    "description": "Rename column Código Estrategia to codigo_estrategia"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Denominacion de la Estrategia",
+    "newColumnName": "denominacion_de_la_estrategia",
+    "description": "Rename column Denominacion de la Estrategia to denominacion_de_la_estrategia"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código de la actuación",
+    "newColumnName": "codigo_de_la_actuacion",
+    "description": "Rename column Código de la actuación to codigo_de_la_actuacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Denominación de la actuación",
+    "newColumnName": "denominacion_de_la_actuacion",
+    "description": "Rename column Denominación de la actuación to denominacion_de_la_actuacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código Area de Gobierno",
+    "newColumnName": "codigo_area_de_gobierno",
+    "description": "Rename column Código Area de Gobierno to codigo_area_de_gobierno"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Área de Gobierno",
+    "newColumnName": "area_de_gobierno",
+    "description": "Rename column Área de Gobierno to area_de_gobierno"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Código Dirección General",
+    "newColumnName": "codigo_direccion_general",
+    "description": "Rename column Código Dirección General to codigo_direccion_general"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Dirección General",
+    "newColumnName": "direccion_general",
+    "description": "Rename column Dirección General to direccion_general"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Fecha Inicio",
+    "newColumnName": "fecha_inicio",
+    "description": "Rename column Fecha Inicio to fecha_inicio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Fecha Fin",
+    "newColumnName": "fecha_fin",
+    "description": "Rename column Fecha Fin to fecha_fin"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "% Cumplimiento",
+    "newColumnName": "Cumplimiento",
+    "description": "Rename column % Cumplimiento to Cumplimiento"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Situación actuación",
+    "newColumnName": "situacion_actuacion",
+    "description": "Rename column Situación actuación to situacion_actuacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Cumplimiento",
+    "newColumnName": "cumplimiento",
+    "description": "Rename column Cumplimiento to cumplimiento"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cumplimiento",
+    "expression": "grel:value.replace(\"%\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column cumplimiento using expression grel:value.replace(\"%\",\"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "cumplimiento",
+    "expression": "grel:\"porcentaje\"",
+    "onError": "set-to-blank",
+    "newColumnName": "cumplimiento_unidad",
+    "columnInsertIndex": 18,
+    "description": "Create column cumplimiento_unidad at index 18 based on column cumplimiento using expression grel:\"porcentaje\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_inicio",
+    "expression": "grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_inicio using expression grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_fin",
+    "expression": "grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_fin using expression grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "codigo_distrito",
+    "expression": "grel:row.index+1",
+    "onError": "set-to-blank",
+    "newColumnName": "identificador",
+    "columnInsertIndex": 1,
+    "description": "Create column identificador at index 1 based on column codigo_distrito using expression grel:row.index+1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "identificador",
+    "index": 0,
+    "description": "Move column identificador to position 0"
+  }
+]

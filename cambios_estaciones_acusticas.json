@@ -1,0 +1,169 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nº",
+    "newColumnName": "numero",
+    "description": "Rename column Nº to numero"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Nombre",
+    "newColumnName": "nombre",
+    "description": "Rename column Nombre to nombre"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COD_VIA",
+    "newColumnName": "cod_via",
+    "description": "Rename column COD_VIA to cod_via"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "VIA_CLASE",
+    "newColumnName": "via_clase",
+    "description": "Rename column VIA_CLASE to via_clase"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "VIA_PAR",
+    "newColumnName": "via_par",
+    "description": "Rename column VIA_PAR to via_par"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "VIA_NOMBRE",
+    "newColumnName": "via_nombre",
+    "description": "Rename column VIA_NOMBRE to via_nombre"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Dirección",
+    "newColumnName": "direccion",
+    "description": "Rename column Dirección to direccion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Longitud_gms",
+    "newColumnName": "longitud_gms",
+    "description": "Rename column Longitud_gms to longitud_gms"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Latitud_gms",
+    "newColumnName": "latitud_gms",
+    "description": "Rename column Latitud_gms to latitud_gms"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LATITUD_ED50",
+    "newColumnName": "latitud_ed50",
+    "description": "Rename column LATITUD_ED50 to latitud_ed50"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LONGITUD_ED50",
+    "newColumnName": "longitud_ed50",
+    "description": "Rename column LONGITUD_ED50 to longitud_ed50"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Fecha alta",
+    "newColumnName": "fecha_alta",
+    "description": "Rename column Fecha alta to fecha_alta"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Coordenada_X_ETRS89",
+    "newColumnName": "coordenada_x_etrs89",
+    "description": "Rename column Coordenada_X_ETRS89 to coordenada_x_etrs89"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Coordenada_Y_ETRS89",
+    "newColumnName": "coordenada_y_etrs89",
+    "description": "Rename column Coordenada_Y_ETRS89 to coordenada_y_etrs89"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Alt.(m)",
+    "newColumnName": "altitud",
+    "description": "Rename column Alt.(m) to altitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LONGITUD_WGS84",
+    "newColumnName": "longitud_wgs84",
+    "description": "Rename column LONGITUD_WGS84 to longitud_wgs84"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LATITUD_WGS84",
+    "newColumnName": "lantitud_wgs84",
+    "description": "Rename column LATITUD_WGS84 to lantitud_wgs84"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_alta",
+    "expression": "grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_alta using expression grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "coordenada_x_etrs89",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column coordenada_x_etrs89 using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "coordenada_y_etrs89",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column coordenada_y_etrs89 using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "altitud",
+    "expression": "grel:\"m\"",
+    "onError": "set-to-blank",
+    "newColumnName": "unidad_altitud",
+    "columnInsertIndex": 12,
+    "description": "Create column unidad_altitud at index 12 based on column altitud using expression grel:\"m\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "altitud",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column altitud using expression grel:value.replace(\",\",\".\")"
+  }
+]

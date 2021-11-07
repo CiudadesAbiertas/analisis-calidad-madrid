@@ -1,0 +1,107 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "﻿Gis_X",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ﻿Gis_X using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Gis_Y",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Gis_Y using expression grel:value.replace(\",\",\".\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "﻿Gis_X",
+    "expression": "grel:row.index+1",
+    "onError": "set-to-blank",
+    "newColumnName": "identificador",
+    "columnInsertIndex": 1,
+    "description": "Create column identificador at index 1 based on column ﻿Gis_X using expression grel:row.index+1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "identificador",
+    "index": 0,
+    "description": "Move column identificador to position 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "﻿Gis_X",
+    "newColumnName": "﻿gis_X",
+    "description": "Rename column ﻿Gis_X to ﻿gis_X"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Gis_Y",
+    "newColumnName": "gis_Y",
+    "description": "Rename column Gis_Y to gis_Y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Fecha de Alta",
+    "newColumnName": "fecha_de_alta",
+    "description": "Rename column Fecha de Alta to fecha_de_alta"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Distrito",
+    "newColumnName": "distrito",
+    "description": "Rename column Distrito to distrito"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Barrio",
+    "newColumnName": "barrio",
+    "description": "Rename column Barrio to barrio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Calle",
+    "newColumnName": "calle",
+    "description": "Rename column Calle to calle"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Número de Finca",
+    "newColumnName": "numero_de_finca",
+    "description": "Rename column Número de Finca to numero_de_finca"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Longitud",
+    "newColumnName": "longitud",
+    "description": "Rename column Longitud to longitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Latitud",
+    "newColumnName": "latitud",
+    "description": "Rename column Latitud to latitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Direccion",
+    "newColumnName": "direccion",
+    "description": "Rename column Direccion to direccion"
+  }
+]

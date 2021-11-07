@@ -1,0 +1,172 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO_INCIDENCIA_ID",
+    "newColumnName": "tipo_incidencia_id",
+    "description": "Rename column TIPO_INCIDENCIA_ID to tipo_incidencia_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO_INCIDENCIA",
+    "newColumnName": "tipo_incidencia",
+    "description": "Rename column TIPO_INCIDENCIA to tipo_incidencia"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CANAL_DE_ENTRADA_ID",
+    "newColumnName": "canal_de_entrada_id",
+    "description": "Rename column CANAL_DE_ENTRADA_ID to canal_de_entrada_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CANAL_DE_ENTRADA",
+    "newColumnName": "canal_de_entrada",
+    "description": "Rename column CANAL_DE_ENTRADA to canal_de_entrada"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "FECHA_DE_RECEPCION",
+    "newColumnName": "fecha_de_recepcion",
+    "description": "Rename column FECHA_DE_RECEPCION to fecha_de_recepcion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "HORA_DE_RECEPCION",
+    "newColumnName": "hora_de_recepción",
+    "description": "Rename column HORA_DE_RECEPCION to hora_de_recepción"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CATEGORIA_NIVEL1_ID",
+    "newColumnName": "categoria_nivel1_id",
+    "description": "Rename column CATEGORIA_NIVEL1_ID to categoria_nivel1_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CATEGORIA_NIVEL1",
+    "newColumnName": "categoria_nivel1",
+    "description": "Rename column CATEGORIA_NIVEL1 to categoria_nivel1"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CATEGORIA_NIVEL2_ID",
+    "newColumnName": "categoria_nivel2_id",
+    "description": "Rename column CATEGORIA_NIVEL2_ID to categoria_nivel2_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CATEGORIA_NIVEL2",
+    "newColumnName": "categoria_nivel2",
+    "description": "Rename column CATEGORIA_NIVEL2 to categoria_nivel2"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO_VIAL",
+    "newColumnName": "tipo_vial",
+    "description": "Rename column TIPO_VIAL to tipo_vial"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE_DE_VIAL",
+    "newColumnName": "nombre_de_vial",
+    "description": "Rename column NOMBRE_DE_VIAL to nombre_de_vial"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NUMERO",
+    "newColumnName": "numero",
+    "description": "Rename column NUMERO to numero"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CALIFICADOR",
+    "newColumnName": "calificador",
+    "description": "Rename column CALIFICADOR to calificador"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRITO_ID",
+    "newColumnName": "distrito_id",
+    "description": "Rename column DISTRITO_ID to distrito_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRITO",
+    "newColumnName": "distrito",
+    "description": "Rename column DISTRITO to distrito"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "BARRIO_ID",
+    "newColumnName": "barrio_id",
+    "description": "Rename column BARRIO_ID to barrio_id"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "BARRIO",
+    "newColumnName": "barrio",
+    "description": "Rename column BARRIO to barrio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CODIGO_POSTAL",
+    "newColumnName": "codigo_postal",
+    "description": "Rename column CODIGO_POSTAL to codigo_postal"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA_OFICIAL_X",
+    "newColumnName": "coordnada_oficial_x",
+    "description": "Rename column COORDENADA_OFICIAL_X to coordnada_oficial_x"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA_OFICIAL_Y",
+    "newColumnName": "coodenada_oficial_y",
+    "description": "Rename column COORDENADA_OFICIAL_Y to coodenada_oficial_y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA_REAL_X",
+    "newColumnName": "coordenada_real_x",
+    "description": "Rename column COORDENADA_REAL_X to coordenada_real_x"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA_REAL_Y",
+    "newColumnName": "coordenada_real_y",
+    "description": "Rename column COORDENADA_REAL_Y to coordenada_real_y"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_de_recepcion",
+    "expression": "grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_de_recepcion using expression grel:value.split(\"/\")[2]+\"-\"+value.split(\"/\")[1]+\"-\"+value.split(\"/\")[0]"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "tipo_incidencia_id",
+    "expression": "grel:row.index+1",
+    "onError": "set-to-blank",
+    "newColumnName": "identificador",
+    "columnInsertIndex": 1,
+    "description": "Create column identificador at index 1 based on column tipo_incidencia_id using expression grel:row.index+1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "identificador",
+    "index": 0,
+    "description": "Move column identificador to position 0"
+  }
+]

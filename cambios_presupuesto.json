@@ -1,0 +1,76 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Proy-Ppto-2020",
+    "expression": "grel:value.replace(\".\",\"\").replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Proy-Ppto-2020 using expression grel:value.replace(\".\",\"\").replace(\",\",\".\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Centro",
+    "expression": "grel:row.index+1",
+    "onError": "set-to-blank",
+    "newColumnName": "identificador",
+    "columnInsertIndex": 1,
+    "description": "Create column identificador at index 1 based on column Centro using expression grel:row.index+1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "identificador",
+    "index": 0,
+    "description": "Move column identificador to position 0"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Centro",
+    "newColumnName": "centro",
+    "description": "Rename column Centro to centro"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Descripcion Centro",
+    "newColumnName": "descripcion_centro",
+    "description": "Rename column Descripcion Centro to descripcion_centro"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Capitulo",
+    "newColumnName": "capitulo",
+    "description": "Rename column Capitulo to capitulo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Descripcion Capitulo",
+    "newColumnName": "descripcion_capitulo",
+    "description": "Rename column Descripcion Capitulo to descripcion_capitulo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Economico",
+    "newColumnName": "economico",
+    "description": "Rename column Economico to economico"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Relación de partidas",
+    "newColumnName": "relacion_de_partidas",
+    "description": "Rename column Relación de partidas to relacion_de_partidas"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Proy-Ppto-2020",
+    "newColumnName": "proy_ppto_2020",
+    "description": "Rename column Proy-Ppto-2020 to proy_ppto_2020"
+  }
+]

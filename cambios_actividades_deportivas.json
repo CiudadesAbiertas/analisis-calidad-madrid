@@ -1,0 +1,207 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ID-EVENTO",
+    "newColumnName": "id_evento",
+    "description": "Rename column ID-EVENTO to id_evento"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TITULO",
+    "newColumnName": "titulo",
+    "description": "Rename column TITULO to titulo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "PRECIO",
+    "newColumnName": "precio",
+    "description": "Rename column PRECIO to precio"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "GRATUITO",
+    "newColumnName": "gratuito",
+    "description": "Rename column GRATUITO to gratuito"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LARGA-DURACION",
+    "newColumnName": "larga_duracion",
+    "description": "Rename column LARGA-DURACION to larga_duracion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DIAS-SEMANA",
+    "newColumnName": "dias_semana",
+    "description": "Rename column DIAS-SEMANA to dias_semana"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DIAS-EXCLUIDOS",
+    "newColumnName": "dias_excluidos",
+    "description": "Rename column DIAS-EXCLUIDOS to dias_excluidos"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "FECHA",
+    "newColumnName": "fecha",
+    "description": "Rename column FECHA to fecha"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "FECHA-FIN",
+    "newColumnName": "fecha_fin",
+    "description": "Rename column FECHA-FIN to fecha_fin"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "HORA",
+    "newColumnName": "hora",
+    "description": "Rename column HORA to hora"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DESCRIPCION",
+    "newColumnName": "descripcion",
+    "description": "Rename column DESCRIPCION to descripcion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CONTENT-URL",
+    "newColumnName": "content_url",
+    "description": "Rename column CONTENT-URL to content_url"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TITULO-ACTIVIDAD",
+    "newColumnName": "titulo_actividad",
+    "description": "Rename column TITULO-ACTIVIDAD to titulo_actividad"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "URL-ACTIVIDAD",
+    "newColumnName": "url_actividad",
+    "description": "Rename column URL-ACTIVIDAD to url_actividad"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "URL-INSTALACION",
+    "newColumnName": "url_instalacion",
+    "description": "Rename column URL-INSTALACION to url_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE-INSTALACION",
+    "newColumnName": "nombre_instalacion",
+    "description": "Rename column NOMBRE-INSTALACION to nombre_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "ACCESIBILIDAD-INSTALACION",
+    "newColumnName": "accesibilidad_instalacion",
+    "description": "Rename column ACCESIBILIDAD-INSTALACION to accesibilidad_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CLASE-VIAL-INSTALACION",
+    "newColumnName": "clase_vial_instalacion",
+    "description": "Rename column CLASE-VIAL-INSTALACION to clase_vial_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NOMBRE-VIA-INSTALACION",
+    "newColumnName": "nombre_via_instalacion",
+    "description": "Rename column NOMBRE-VIA-INSTALACION to nombre_via_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "NUM-INSTALACION",
+    "newColumnName": "num_instalacion",
+    "description": "Rename column NUM-INSTALACION to num_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "DISTRITO-INSTALACION",
+    "newColumnName": "distrito_instalacion",
+    "description": "Rename column DISTRITO-INSTALACION to distrito_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "BARRIO-INSTALACION",
+    "newColumnName": "barrio_instalacion",
+    "description": "Rename column BARRIO-INSTALACION to barrio_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "CODIGO-POSTAL-INSTALACION",
+    "newColumnName": "codigo_postal_instalacion",
+    "description": "Rename column CODIGO-POSTAL-INSTALACION to codigo_postal_instalacion"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA-X",
+    "newColumnName": "coordenada_x",
+    "description": "Rename column COORDENADA-X to coordenada_x"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "COORDENADA-Y",
+    "newColumnName": "coordenada_y",
+    "description": "Rename column COORDENADA-Y to coordenada_y"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LATITUD",
+    "newColumnName": "latitud",
+    "description": "Rename column LATITUD to latitud"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "LONGITUD",
+    "newColumnName": "longitud",
+    "description": "Rename column LONGITUD to longitud"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column",
+    "description": "Remove column Column"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "TIPO",
+    "newColumnName": "tipo",
+    "description": "Rename column TIPO to tipo"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "AUDIENCIA",
+    "newColumnName": "audiencia",
+    "description": "Rename column AUDIENCIA to audiencia"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha",
+    "expression": "grel:value.replace(\" \",\"T\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha using expression grel:value.replace(\" \",\"T\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "fecha_fin",
+    "expression": "grel:value.replace(\" \",\"T\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column fecha_fin using expression grel:value.replace(\" \",\"T\")"
+  }
+]
